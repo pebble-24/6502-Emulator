@@ -1,6 +1,7 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#include <stdbool.h>
 #include <stdint.h>
 
 /* Signed int types */
@@ -22,5 +23,8 @@ typedef double f64;
 /* Boolean Types */
 typedef int b32;
 typedef bool b8;
+
+typedef u8 byte;
+typedef u16 word;
 
 #endif
