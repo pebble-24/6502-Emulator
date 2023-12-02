@@ -6,7 +6,7 @@ project "6502-Emulator"
    language "C"
    targetdir "bin/%{cfg.buildcfg}"
 
-   files { "src/main.c" }
+   files { "src/main.c", "src/instruction.c", "src/io.c", "src/memory.c", "src/cpu.c", "src/computer.c" }
    links {  }
 
    filter "configurations:Debug"
