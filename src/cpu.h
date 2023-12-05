@@ -1,6 +1,8 @@
 #ifndef CPU_H
 #define CPU_H
 
+#include <stdio.h>
+
 #include "types.h"
 
 struct cpu {
@@ -27,9 +29,12 @@ struct cpu {
  * Bit 2 Interrupt Disable
  * Bit 1 Zero
  * Bit 0 Carry
-*/
+ */
 
 void cpu_reset(struct cpu *cpu);
 void cpu_status_reset(struct cpu *cpu);
+
+void cpu_registers_output(struct cpu *cpu);
+void cpu_status_output(byte status_register);
 
 #endif
