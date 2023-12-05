@@ -32,13 +32,13 @@ void memory_write_word(struct memory *memory, u16 index)
 }
 
 /* Fetch */
-byte memory_fetch_byte(struct memory *memory,  u16 index, u64 *cycles)
+byte memory_fetch_byte(struct memory *memory,  u16 index, i64 *cycles)
 {
 	(*cycles)--;
 	return memory_read_byte(memory, index);
 }
 
-word memory_fetch_word(struct memory *memory,  u16 index, u64 *cycles)
+word memory_fetch_word(struct memory *memory,  u16 index, i64 *cycles)
 {
 	(*cycles) -= 2;
 	return memory_read_word(memory, index);
